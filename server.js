@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const port = 8080;
+//const port = 8080;
+const port = process.env.PORT || 8000
 
 var sqlite3 = require('sqlite3');
 var db = new sqlite3.Database('app/data/sqlitedb');
