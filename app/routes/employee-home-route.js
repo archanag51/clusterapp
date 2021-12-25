@@ -2,7 +2,7 @@
 
 module.exports = function (app, db) {
 
-  app.get('/home', (req, res) => {
+  app.get('/', (req, res) => {
 
     res.render("home");
     //processData(res, "SELECT * FROM employees where id == "+req.params.id);
