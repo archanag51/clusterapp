@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ClusterOne</title>
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid orange;
+
+        }
+    </style>
+</head>
+
+<body>
+    </br>
+    </br>
+    <table>
+        <thead>
+            <th>EmpId</th>
+            <th>Name</th>
+            <th>Certification</th>
+            <th>Status</th>
+            <th>Planned Date</th>
+            <th>Voucher Issued</th>
+            <th>Remarks</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+        <% for (let i =0; i < aEmployees.length;  i++ ) { %>
+            <tr>
+                <td>
+                    <%= aEmployees[i].empid %>
+                </td>
+                <td>
+                    <%= aEmployees[i].name %>
+                </td>
+                <td>
+                    <%= aEmployees[i].certification %>
+                </td>
+                <td>
+                    <%= aEmployees[i].status %>
+                </td>
+                <td>
+                    <%= aEmployees[i].planneddate %>
+                </td>
+                <td>
+                    <%= aEmployees[i].voucherissued %>
+                </td>
+                <td>
+                    <%= aEmployees[i].remarks %>
+                </td>
+                <td>
+                    <form action="/api/editemployee/<%= aEmployees[i].id %>" method="get">
+                        <button type="submit">Edit</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/api/deleteemployee/<%= aEmployees[i].id %>" method="get">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+
+    </table>
+    </br>
+    <form method="GET" action="/api/employeeform">
+        <button type="submit">Add New Employee</button>
+    </form>
+
+
+</body>
+
+</html>

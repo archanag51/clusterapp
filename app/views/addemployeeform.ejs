@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Add Employee</title>
+    <style>
+        table,
+        td {
+            border: 1px solid orange;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>HTML registration form with varification</h1>
+
+        <form method="POST" action="/api/employee/" class="registration-form" name="registration">
+            <table>
+                <tr>
+                    <td>
+                        <label for="empid">EmpId:</label>
+                    </td>
+                    <td>
+                        <input type="number" name="empid" id="empid">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name">Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="name" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="certification">Certification :</label>
+                    </td>
+                    <td>
+                        <input type="text" name="certification" id="certification">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="status">Status :</label>
+                    </td>
+                    <td>
+                        <select name="status" id="status">
+                            <option value="">Select status</option>
+                            <option value="Done">Done</option>
+                            <option value="Planned">Planned</option>
+                            <option value="To Enroll">To Enroll</option>
+                            <option value="Failed">Failed</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="planneddate"> Planned date :</label>
+                    </td>
+                    <td>
+                        <input type="date" name="planneddate" id="planneddate">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="voucherissued">Voucher Issued :</label>
+                    </td>
+                    <td>
+                        <select name="voucherissued" id="voucherissued">
+                            <option value="">Voucher Issued</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="remarks">Remarks :</label>
+                    </td>
+                    <td>
+                        <input type="text" name="remarks" id="remarks">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" class="submit" value="Add Employee" />
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Employee</title>
+    <style>
+        table,
+        td {
+            border: 1px solid orange;
+
+        }
+    </style>
+</head>
+
+<body>
+    Form
+    <form method="POST" action="/api/editemployee/<%= aEmployees[0].id %>">
+        <table>
+            <tr>
+                <td>
+                    <label for="empid">EmpId:</label>
+                </td>
+                <td>
+                    <input type="number" name="empid" id="empid" value="<%= aEmployees[0].empid %>">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Name:</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="name" value="<%= aEmployees[0].name %>">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="certification">Certification :</label>
+                </td>
+                <td>
+                    <input type="text" name="certification" id="certification" value="<%= aEmployees[0].certification %>">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="status">Status :</label>
+                </td>
+                <td>
+                    <select name="status" id="status">
+                        <option value="<%= aEmployees[0].status %>">
+                            Select status
+                        </option>
+                        <option value="Done">Done</option>
+                        <option value="Planned">Planned</option>
+                        <option value="To Enroll">To Enroll</option>
+                        <option value="Failed">Failed</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="planneddate"> Planned date :</label>
+                </td>
+                <td>
+                    <input type="date" name="planneddate" id="planneddate" value="<%= aEmployees[0].planneddate %>">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="voucherissued">Voucher Issued :</label>
+                </td>
+                <td>
+                    <select name="voucherissued" id="voucherissued">
+                        <option value="<%= aEmployees[0].voucherissued %>">Select
+
+                        </option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <label for="remarks">Remarks :</label>
+                </td>
+                <td>
+                    <input type="text" name="remarks" id="remarks" value="<%= aEmployees[0].remarks %>">
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" class="submit" value="Update Employee" />
+                </td>
+            </tr>
+        </table>
+
+
+    </form>
+</body>
+
+</html>
